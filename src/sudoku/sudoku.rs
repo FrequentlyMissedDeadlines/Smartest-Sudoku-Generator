@@ -35,6 +35,4 @@ mod tests {
         };
         assert_eq!(tested.to_string(), "0".repeat(81));
     }
-
-
 }

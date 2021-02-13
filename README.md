@@ -1,5 +1,7 @@
 # Smartest Sudoku Generator
 ![Build](https://github.com/FrequentlyMissedDeadlines/Smartest-Sudoku-Generator/workflows/Build/badge.svg?branch=main)
+![Release](https://github.com/FrequentlyMissedDeadlines/Smartest-Sudoku-Generator/workflows/Release/badge.svg?branch=main)
+[![codecov](https://codecov.io/gh/FrequentlyMissedDeadlines/Smartest-Sudoku-Generator/branch/main/graph/badge.svg?token=GBZ6Z36YDM)](https://codecov.io/gh/FrequentlyMissedDeadlines/Smartest-Sudoku-Generator)
 
 This sudoku generator is smart enough to detect the difficulty of the generated sudoku.
 
