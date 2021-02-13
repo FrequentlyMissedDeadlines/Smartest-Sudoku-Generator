@@ -1,0 +1,15 @@
+[package]
+name = "sudo-generator"
+version = "1.0.0"
+authors = ["Frequently Missed Deadlines <frequentlymisseddeadlines@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.8.3"
+itertools = "0.10.0"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
