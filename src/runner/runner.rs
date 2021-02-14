@@ -12,6 +12,7 @@ impl Runner {
         let sudoku = sudoku::Sudoku::new();
         let tree = tree::Tree::new(10);
         println!("Sudoku: {:?}", sudoku.to_string());
+        println!("Solved Sudoku: {:?}", sudoku::Sudoku::new_solved().to_string());
         println!("Dummy tree, {:?}", tree.node);
     }
 }

@@ -5,6 +5,10 @@
 
 This sudoku generator is smart enough to detect the difficulty of the generated sudoku.
 
+## Usage
+
+WIP, not ready yet but this repo might not stay public as it seems that good algorithms to generate sudokus can make a lot of money in mobile apps. Star repo to keep it public.
+
 ## Build and run
 ``` bash
 # Run in debug mode
@@ -23,5 +27,5 @@ export RUSTC_BOOTSTRAP=1
 export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Copt-level=0 -Clink-dead-code -Coverflow-checks=off"
 cargo clean
 cargo test
-grcov ./target/debug/ -s . -t html --llvm --branch --ignore-not-existing -o ./target/debug/coverage/ --ignore src/main.rs
+grcov ./target/debug/ -s . -t html --llvm --branch --ignore-not-existing -o ./target/debug/coverage/
 ```

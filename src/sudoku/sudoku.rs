@@ -14,6 +14,17 @@ impl Sudoku {
     pub fn to_string(&self) -> String {
         self.values.to_vec().iter().map(|a| a.to_vec().iter().join("")).join("")
     }
+
+    pub fn new_solved() -> Sudoku {
+        let mut values = [ [0 ; 9] ; 9];
+        for x in 0..9 {
+            values[0][x] = (x + 1) as i8;
+        }
+
+        Sudoku {
+            values: values
+        }
+    }
 }
 
 
