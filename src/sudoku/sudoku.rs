@@ -83,4 +83,30 @@ mod tests {
         };
         assert_eq!(tested.to_string(), "0".repeat(81));
     }
+
+    #[test]
+    fn test_is_solved() {
+        let empty = Sudoku {
+            values: [ [0 ; 9] ; 9]
+        };
+        let solved = Sudoku::parse(String::from("534678912672195348198342567859761423426853791713924856961537284287419635345286179"));
+        let wrong_square = Sudoku::parse(String::from("123456789200000000300000000400000000500000000600000000700000000800000000900000000"));
+        let wrong_row = Sudoku::parse(String::from("100000000200000000300000000400000000500000000600000000700000000800000000900000000"));
+        let wrong_col = Sudoku::parse(String::from("123456789200000000300000000400000000500000000600000000700000000800000000000000000"));
+
+        assert_eq!(empty.is_solved(), false);
+        assert_eq!(wrong_square.is_solved(), false);
+        assert_eq!(wrong_row.is_solved(), false);
+        assert_eq!(wrong_col.is_solved(), false);
+
+        assert_eq!(solved.is_solved(), true);
+    }
+
+    #[test]
+    fn test_parse() {
+        let string = "534678912672195348198342567859761423426853791713924856961537284287419635345286179";
+        let tested = Sudoku::parse(String::from(string));
+
+        assert_eq!(tested.to_string(), string);
+    }
 }
