@@ -11,6 +11,18 @@ impl Sudoku {
         }
     }
 
+    pub fn copy(&self) -> Sudoku {
+        let mut values = [ [0 ; 9] ; 9];
+        for x in 0..9 {
+            for y in 0..9 {
+                values[x][y] = self.values[x][y];
+            }
+        }
+        Sudoku {
+            values: values
+        }
+    }
+
     pub fn parse(string: String) -> Sudoku {
         let mut values = [ [0 ; 9] ; 9];
         for x in 0..9 {
@@ -106,6 +118,14 @@ mod tests {
     fn test_parse() {
         let string = "534678912672195348198342567859761423426853791713924856961537284287419635345286179";
         let tested = Sudoku::parse(String::from(string));
+
+        assert_eq!(tested.to_string(), string);
+    }
+
+    #[test]
+    fn test_copy() {
+        let string = "534678912672195348198342567859761423426853791713924856961537284287419635345286179";
+        let tested = Sudoku::parse(String::from(string)).copy();
 
         assert_eq!(tested.to_string(), string);
     }
