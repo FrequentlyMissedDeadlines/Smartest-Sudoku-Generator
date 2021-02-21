@@ -25,6 +25,7 @@ cargo test
 rustup component add llvm-tools-preview
 cargo install grcov
 export RUSTC_BOOTSTRAP=1
+export CARGO_INCREMENTAL=0
 export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Copt-level=0 -Clink-dead-code -Coverflow-checks=off"
 cargo clean
 cargo test
